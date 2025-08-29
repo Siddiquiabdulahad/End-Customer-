@@ -14,6 +14,7 @@
         }
     </style>
     <link link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style></style>
@@ -173,17 +174,32 @@
             <!-- Map -->
             <div class="bg-white shadow-sm border-b p-4 pt-0">
                 <div class="flex items-center justify-between gap-4 absolute top-28 z-[999]">
-                    <div class="flex items-center gap-4 bg-white h-12 p-1.5 rounded-lg primary-box-shadow">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="map-pin" class="w-5 h-5 text-blue-600"></i>
-                            <select id="locationSelect"
-                                class="font-medium bg-transparent border-none outline-none cursor-pointer text-gray-900 hover:text-blue-600 focus:text-blue-600">
-                                <option value="New York, NY">New York, NY</option>
-                                <option value="Los Angeles, CA">Los Angeles, CA</option>
-                                <option value="Chicago, IL">Chicago, IL</option>
-                                <option value="Miami, FL">Miami, FL</option>
-                                <option value="Houston, TX">Houston, TX</option>
-                            </select>
+                    <!-- Location Dropdown -->
+                    <div class="relative" id="locationSelect">
+                        <div id="locationDropdownBtn"
+                            class="flex items-center gap-2 bg-white h-10 w-45 justify-between  p-2 rounded-lg primary-box-shadow cursor-pointer">
+                            <div class="flex items-center gap-2">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-gray"></i>
+                                <span id="selectedLocation" class="font-medium text-gray text-nowrap">New York, NY</span>
+                            </div>
+
+                            <i class="fas fa-caret-down"></i>
+                        </div>
+                        <div id="locationDropdownMenu"
+                            class="absolute left-0  w-45 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg hidden z-50">
+                            <div class="py-1">
+                                <div data-value="New York, NY"
+                                    class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">New York, NY</div>
+                                <div data-value="Los Angeles, CA"
+                                    class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Los Angeles, CA
+                                </div>
+                                <div data-value="Chicago, IL"
+                                    class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Chicago, IL</div>
+                                <div data-value="Miami, FL"
+                                    class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Miami, FL</div>
+                                <div data-value="Houston, TX"
+                                    class="dropdown-item px-4 py-2 cursor-pointer hover:bg-powder-aqua">Houston, TX</div>
+                            </div>
                         </div>
                     </div>
 
@@ -280,7 +296,8 @@
                     <img src="./assets/img/donate-1.png" alt="Medicine Order Image" class="w-28 h-28 object-cover">
                     <div class="flex items-center justify-between gap-12 text-gray">
                         <span class="font-semibold">Donate to <br> NGO</span>
-                        <span class="primary-radius-18 p-2 cursor-pointer" onclick="window.location.href='donation.html'"><i data-lucide="arrow-right"></i></span>
+                        <span class="primary-radius-18 p-2 cursor-pointer"
+                            onclick="window.location.href='donation.html'"><i data-lucide="arrow-right"></i></span>
                     </div>
                 </a>
 
@@ -343,62 +360,61 @@
         </section>
 
         <!-- Carousel Section -->
-            <section class="carousel-section ">
-                <div class="carousel-container" id="carousel">
-                    <div class="carousel-track">
-                        <a href="#" class="carousel-slide"><img src="./assets/img/slider-img1.svg"  alt="Slide 1" /></a>
-                        <a href="#" class="carousel-slide"><img src="./assets/img/slider-img2.png"  alt="Slide 2" /></a>
-                        <a href="#" class="carousel-slide"><img src="./assets/img/slider-img3.png"  alt="Slide 3" /></a>
-                    </div>
+        <section class="carousel-section ">
+            <div class="carousel-container" id="carousel">
+                <div class="carousel-track">
+                    <a href="#" class="carousel-slide"><img src="./assets/img/slider-img1.svg" alt="Slide 1" /></a>
+                    <a href="#" class="carousel-slide"><img src="./assets/img/slider-img2.png" alt="Slide 2" /></a>
+                    <a href="#" class="carousel-slide"><img src="./assets/img/slider-img3.png" alt="Slide 3" /></a>
                 </div>
-                <div class="carousel-dots"></div>
-            </section>
+            </div>
+            <div class="carousel-dots"></div>
+        </section>
 
-         <!--Shop by categories-->
-            <section class="bg-white p-5  md:p-20 categories-section">
-                <div>
-                    <h1 class="font-bold text-xl md:text-3xl text-charcoal-black">
-                        Shop By Categories
-                    </h1>
-                    <div class="custom-hr"></div>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 pt-5">
-                        <!--Popular Medicines Card-->
-                        <a href="#">
-                            <div class="card categories-card bg-light-coral rounded-[10px]">
-                                <p class="text-base md:text-lg font-bold text-white">Popular <br> Medicine</p>
-                                <div class="flex justify-end">
-                                    <img src="./assets/img/popular-medicine.png" alt="Medicine Image" class="w-35 h-35">
-                                </div>
+        <!--Shop by categories-->
+        <section class="bg-white p-5  md:p-20 categories-section">
+            <div>
+                <h1 class="font-bold text-xl md:text-3xl text-charcoal-black">
+                    Shop By Categories
+                </h1>
+                <div class="custom-hr"></div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 pt-5">
+                    <!--Popular Medicines Card-->
+                    <a href="#">
+                        <div class="card categories-card bg-light-coral rounded-[10px]">
+                            <p class="text-base md:text-lg font-bold text-white">Popular <br> Medicine</p>
+                            <div class="flex justify-end">
+                                <img src="./assets/img/popular-medicine.png" alt="Medicine Image" class="w-35 h-35">
                             </div>
-                        </a>
-                        <!--Pain & Inflammation Relief Card-->
-                        <a href="#">
-                            <div class="card categories-card bg-mint-leaf rounded-[10px]">
-                                <p class="text-base md:text-lg font-bold text-white">Pain & <br> Inflammatory Relief</p>
-                                <div class="flex justify-end">
-                                    <img src="./assets/img/pain-relief.png" alt="Medicine Image" class="w-35 h-35">
-                                </div>
+                        </div>
+                    </a>
+                    <!--Pain & Inflammation Relief Card-->
+                    <a href="#">
+                        <div class="card categories-card bg-mint-leaf rounded-[10px]">
+                            <p class="text-base md:text-lg font-bold text-white">Pain & <br> Inflammatory Relief</p>
+                            <div class="flex justify-end">
+                                <img src="./assets/img/pain-relief.png" alt="Medicine Image" class="w-35 h-35">
                             </div>
-                        </a>
-                        <!--Cold,Coughr & Fever Card-->
-                        <a href="#">
-                            <div class="card categories-card bg-pastel-blue rounded-[10px]">
-                                <p class="text-base md:text-lg font-bold text-white">Cold,<br> Cough & Fever</p>
-                                <div class="flex justify-end">
-                                    <img src="./assets/img/cold-fever.png" alt="Medicine Image" class="w-35 h-35">
-                                </div>
+                        </div>
+                    </a>
+                    <!--Cold,Coughr & Fever Card-->
+                    <a href="#">
+                        <div class="card categories-card bg-pastel-blue rounded-[10px]">
+                            <p class="text-base md:text-lg font-bold text-white">Cold,<br> Cough & Fever</p>
+                            <div class="flex justify-end">
+                                <img src="./assets/img/cold-fever.png" alt="Medicine Image" class="w-35 h-35">
                             </div>
-                        </a>
-                        <!--Skin & Personal Care Card-->
-                        <a href="#">
-                            <div class="card categories-card bg-pastel-red rounded-[10px]">
-                                <p class="text-base md:text-lg font-bold text-white">Skin &<br>Personal Care</p>
-                                <div class="flex justify-end">
-                                    <img src="./assets/img/skin-care.png" alt="Skin care products image"
-                                        class="w-35 h-35">
-                                </div>
-                        
-                    </div>
+                        </div>
+                    </a>
+                    <!--Skin & Personal Care Card-->
+                    <a href="#">
+                        <div class="card categories-card bg-pastel-red rounded-[10px]">
+                            <p class="text-base md:text-lg font-bold text-white">Skin &<br>Personal Care</p>
+                            <div class="flex justify-end">
+                                <img src="./assets/img/skin-care.png" alt="Skin care products image" class="w-35 h-35">
+                            </div>
+
+                        </div>
                     </a>
                     <!--Child & Maternal Health Card-->
                     <a href="#">
@@ -420,7 +436,7 @@
                         </div>
                     </a>
                 </div>
-        </div>
+            </div>
         </section>
 
 
@@ -631,7 +647,7 @@
                     </div>
 
                     <!-- Content -->
-                    <div class="flex flex-col flex-grow px-1">
+                    <div class="flex flex-col">
                         <h3 class="text-xl font-bold">Wellness Forever</h3>
 
                         <!-- Rating -->
@@ -651,15 +667,15 @@
                         </p>
 
                         <!-- Buttons -->
-                        <div class="flex gap-2 mt-auto pt-4 flex-wrap">
+                        <div class="flex gap-2 pt-4 justify-between">
                             <button
-                                class="flex items-center justify-center gap-1 flex-1 min-w-[120px] border border-gray-light2 rounded-md py-2 text-sm font-normal text-gray ">
+                                class="flex items-center justify-center gap-1 w-full max-w-[130px] border border-gray-light2 rounded-md py-2 text-sm font-normal text-gray ">
                                 <i data-lucide="move" class="w-4 h-4"></i>
                                 Directions
                             </button>
 
                             <button
-                                class="flex items-center justify-center gap-1 flex-1 min-w-[120px] border border-gray-light2 rounded-md py-2  text-sm font-normal text-gray">
+                                class="flex items-center justify-center gap-1 w-full max-w-[130px] border border-gray-light2 rounded-md py-2  text-sm font-normal text-gray">
                                 <i data-lucide="phone" class="w-4 h-4"></i>
                                 Call
                             </button>
@@ -667,6 +683,7 @@
                     </div>
                 </div>
 
+                <!-- Pharmacy Card -->
                 <div class=" w-full bg-white rounded-xl shadow-xl p-4 flex flex-col gap-4">
                     <!-- Image -->
                     <div class="relative">
@@ -674,8 +691,8 @@
                     </div>
 
                     <!-- Content -->
-                    <div class="flex flex-col flex-grow px-1">
-                        <h3 class="text-xl font-bold">Apollo Pharmacy</h3>
+                    <div class="flex flex-col">
+                        <h3 class="text-xl font-bold">Wellness Forever</h3>
 
                         <!-- Rating -->
                         <div class="flex items-center text-sm mb-1 flex-wrap">
@@ -690,19 +707,19 @@
                         <!-- Address -->
                         <p class="text-sm text-gray-700 font-normal flex items-center gap-1">
                             <i data-lucide="map-pin" class="w-4 h-4 text-gray-500"></i>
-                            Nobel Hospital, Andheri East
+                            Zenith Hospital, Malad East
                         </p>
 
                         <!-- Buttons -->
-                        <div class="flex gap-2 mt-auto pt-4 flex-wrap">
+                        <div class="flex gap-2 pt-4 justify-between">
                             <button
-                                class="flex items-center justify-center gap-1 flex-1 min-w-[120px] border border-gray-light2 rounded-md py-2 text-sm font-normal text-gray ">
+                                class="flex items-center justify-center gap-1 w-full max-w-[130px] border border-gray-light2 rounded-md py-2 text-sm font-normal text-gray ">
                                 <i data-lucide="move" class="w-4 h-4"></i>
                                 Directions
                             </button>
 
                             <button
-                                class="flex items-center justify-center gap-1 flex-1 min-w-[120px] border border-gray-light2 rounded-md py-2  text-sm font-normal text-gray">
+                                class="flex items-center justify-center gap-1 w-full max-w-[130px] border border-gray-light2 rounded-md py-2  text-sm font-normal text-gray">
                                 <i data-lucide="phone" class="w-4 h-4"></i>
                                 Call
                             </button>
@@ -710,6 +727,7 @@
                     </div>
                 </div>
 
+                <!-- Pharmacy Card -->
                 <div class=" w-full bg-white rounded-xl shadow-xl p-4 flex flex-col gap-4">
                     <!-- Image -->
                     <div class="relative">
@@ -717,8 +735,8 @@
                     </div>
 
                     <!-- Content -->
-                    <div class="flex flex-col flex-grow px-1">
-                        <h3 class="text-xl font-bold">HealthKart</h3>
+                    <div class="flex flex-col">
+                        <h3 class="text-xl font-bold">Wellness Forever</h3>
 
                         <!-- Rating -->
                         <div class="flex items-center text-sm mb-1 flex-wrap">
@@ -733,19 +751,19 @@
                         <!-- Address -->
                         <p class="text-sm text-gray-700 font-normal flex items-center gap-1">
                             <i data-lucide="map-pin" class="w-4 h-4 text-gray-500"></i>
-                            Fortis Hospital, Mulund
+                            Zenith Hospital, Malad East
                         </p>
 
                         <!-- Buttons -->
-                        <div class="flex gap-2 mt-auto pt-4 flex-wrap">
+                        <div class="flex gap-2 pt-4 justify-between">
                             <button
-                                class="flex items-center justify-center gap-1 flex-1 min-w-[120px] border border-gray-light2 rounded-md py-2 text-sm font-normal text-gray ">
+                                class="flex items-center justify-center gap-1 w-full max-w-[130px] border border-gray-light2 rounded-md py-2 text-sm font-normal text-gray ">
                                 <i data-lucide="move" class="w-4 h-4"></i>
                                 Directions
                             </button>
 
                             <button
-                                class="flex items-center justify-center gap-1 flex-1 min-w-[120px] border border-gray-light2 rounded-md py-2  text-sm font-normal text-gray">
+                                class="flex items-center justify-center gap-1 w-full max-w-[130px] border border-gray-light2 rounded-md py-2  text-sm font-normal text-gray">
                                 <i data-lucide="phone" class="w-4 h-4"></i>
                                 Call
                             </button>
@@ -753,6 +771,7 @@
                     </div>
                 </div>
 
+                <!-- Pharmacy Card -->
                 <div class=" w-full bg-white rounded-xl shadow-xl p-4 flex flex-col gap-4">
                     <!-- Image -->
                     <div class="relative">
@@ -760,8 +779,8 @@
                     </div>
 
                     <!-- Content -->
-                    <div class="flex flex-col flex-grow px-1">
-                        <h3 class="text-xl font-bold">Netmeds</h3>
+                    <div class="flex flex-col">
+                        <h3 class="text-xl font-bold">Wellness Forever</h3>
 
                         <!-- Rating -->
                         <div class="flex items-center text-sm mb-1 flex-wrap">
@@ -776,19 +795,19 @@
                         <!-- Address -->
                         <p class="text-sm text-gray-700 font-normal flex items-center gap-1">
                             <i data-lucide="map-pin" class="w-4 h-4 text-gray-500"></i>
-                            Ambani Hospital, Andheri
+                            Zenith Hospital, Malad East
                         </p>
 
                         <!-- Buttons -->
-                        <div class="flex gap-2 mt-auto pt-4 flex-wrap">
+                        <div class="flex gap-2 pt-4 justify-between">
                             <button
-                                class="flex items-center justify-center gap-1 flex-1 min-w-[120px] border border-gray-light2 rounded-md py-2 text-sm font-normal text-gray ">
+                                class="flex items-center justify-center gap-1 w-full max-w-[130px] border border-gray-light2 rounded-md py-2 text-sm font-normal text-gray ">
                                 <i data-lucide="move" class="w-4 h-4"></i>
                                 Directions
                             </button>
 
                             <button
-                                class="flex items-center justify-center gap-1 flex-1 min-w-[120px] border border-gray-light2 rounded-md py-2  text-sm font-normal text-gray">
+                                class="flex items-center justify-center gap-1 w-full max-w-[130px] border border-gray-light2 rounded-md py-2  text-sm font-normal text-gray">
                                 <i data-lucide="phone" class="w-4 h-4"></i>
                                 Call
                             </button>
