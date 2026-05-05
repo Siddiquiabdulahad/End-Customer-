@@ -45,6 +45,7 @@
   --color-green-light: #1A7A5E;
   --color-gray-med: #161C24;
   --color-gray-700: #454F5B;
+  --color-purple-10: rgba(122, 90, 248, 0.10);
 
   /* Box Shadow */
   --box-shadow-1: 4px 4px 10px 4px rgba(0, 0, 0, 0.20);
