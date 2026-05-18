@@ -11,6 +11,7 @@
   --color-gray-light1: #919EAB;
   --color-gray-light2: #637381;
   --color-warm-yellow: #FFC107;
+  --color-light-yellow:#F5B326;
   --color-gray-light3: #DFE3E8;
   --color-white: #ffffff;
   --color-gray: #212b36;
@@ -48,6 +49,7 @@
   --color-purple-10: rgba(122, 90, 248, 0.10);
   --color-dark-teal-green: #115B46;
   --color-teal-green2: #1B785D;
+  --color-banner-blue:#3B7AEF;
   --color-deep-aqua-teal: #0881787A;
   /* Box Shadow */
   --box-shadow-1: 4px 4px 10px 4px rgba(0, 0, 0, 0.20);
@@ -192,6 +194,10 @@ body {
 
   color: var(--color-gray-dark);
 
+}
+
+.material-symbols-outlined.mini-icon{
+  font-size: 18px;
 }
 
 .no-scrollbar::-webkit-scrollbar {
