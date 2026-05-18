@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="/assets/output.css">
+    <!-- Material Symbols Outlined -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+    <main class="py-8">
+        <!-- Banner -->
+        <section class="h-[195px] w-full bg-[url('/assets/img/banner-bg.png')] bg-no-repeat bg-cover">
+            <div class="flex flex-col md:flex-row gap-5 justify-center items-center md:justify-around h-full">
+                <div class="border-b border-light-yellow text-center py-4">
+                    <h3 class="text-xl md:text-[32px] font-bold text-white md:leading-12">Find the Right Doctor, Right When You Need</h3>
+                    <p class="text-sm md:text-base font-semibold text-light-yellow leading-6">Book trusted doctors anytime, anywhere instantly</p>
+                </div>
+                <button class="w-48 h-9 bg-light-yellow rounded-sm text-xs md:text-sm font-bold text-white flex items-center justify-center gap-2 cursor-pointer">
+                    Consult a doctor now
+                    <span class="w-4 h-4 rounded-full bg-white flex items-center justify-center">
+                        <span class="material-symbols-outlined mini-icon text-light-yellow">
+                        keyboard_arrow_right
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Healthcare -->
+        <section class="flex flex-col items-center w-full gap-8 mt-20">
+            <h3 class="text-2xl md:text-[44px] font-bold text-night-black text-center">Access Healthcare Your Way</h3>
+            <div class="flex justify-around w-full">
+                <div class="flex flex-col items-center gap-3">
+                    <span class="text-base md:text-2xl font-bold text-sea-green-deep">20K +</span>
+                    <p class="text-sm md:text-base font-semibold text-night-black text-center">Trusted Consultations</p>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <span class="text-base md:text-2xl font-bold text-sea-green-deep">2K +</span>
+                    <p class="text-sm md:text-base font-semibold text-night-black text-center">Daily Appointments</p>
+                </div>
+                <div class="flex flex-col items-center gap-3">
+                    <span class="text-base md:text-2xl font-bold text-sea-green-deep">30 +</span>
+                    <p class="text-sm md:text-base font-semibold text-night-black text-center">Expert Departments</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Speciality Section -->
+        <section class="mt-20 px-14">
+            <div class="mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Find by Speciality</h2>
+                <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
+                    <div class="w-20 h-1 bg-sea-green-deep"></div>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+                <!-- CARD -->
+                <div class="text-center group cursor-pointer">
+                    <div class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                        <img src="/assets/img/speciality/physician.svg" class="h-full object-cover" alt="Physician">
+                    </div>
+                    <h3 class="mt-2 text-lg font-semibold text-black">
+                        General Physician
+                    </h3>
+                </div>
+
+                <!-- CARD -->
+                <div class="text-center group cursor-pointer">
+                    <div class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                        <img src="/assets/img/speciality/dentist.svg" class="h-full object-cover" alt="Dentist">
+                    </div>
+                    <h3 class="mt-2 text-lg font-semibold text-black">
+                        Dentist
+                    </h3>
+                </div>
+
+                <!-- CARD -->
+                <div class="text-center group cursor-pointer">
+                    <div class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                        <img src="/assets/img/speciality/gynaelogist.svg" class="h-full object-cover" alt="Gynaelogist">
+                    </div>
+                    <h3 class="mt-2 text-lg font-semibold text-black">
+                        Gynaelogist
+                    </h3>
+                </div>
+
+                <!-- CARD -->
+                <div class="text-center group cursor-pointer">
+                    <div class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                        <img src="/assets/img/speciality/dermatologist.svg" class="h-full object-cover" alt="Dermatologist">
+                    </div>
+                    <h3 class="mt-2 text-lg font-semibold text-black">
+                        Dermatologist
+                    </h3>
+                </div>
+
+                <!-- CARD -->
+                <div class="text-center group cursor-pointer">
+                    <div class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                        <img src="/assets/img/speciality/pediatician.svg" class="h-full object-cover" alt="Pediatician">
+                    </div>
+                    <h3 class="mt-2 text-lg font-semibold text-black">
+                        Pediatician
+                    </h3>
+                </div>
+
+                <!-- CARD -->
+                <div class="text-center group cursor-pointer">
+                    <div class="rounded-[10px] overflow-hidden p-3 h-[200px] flex items-center justify-center transition duration-300 group-hover:scale-105">
+                        <img src="/assets/img/speciality/ent-specialist.svg" class="h-full object-cover" alt="ENT-Specialist">
+                    </div>
+                    <h3 class="mt-2 text-lg font-semibold text-black">
+                        ENT Specialist
+                    </h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Doctors Section -->
+        <section class="mt-20 px-14">
+            <div class="mb-6">
+                <h2 class="text-2xl md:text-3xl font-bold text-dark-slate">Top Doctors rated nearby</h2>
+                <div class="h-0.5 bg-smoke-white w-full mt-2 flex items-center">
+                    <div class="w-20 h-1 bg-sea-green-deep"></div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+                <!-- DOCTOR CARD -->
+                <div class="bg-white rounded-[10px] shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <div class="p-3">
+                        <img src="/assets/img/doctors/doctor-1.svg" class="w-full h-52 object-cover rounded-lg" alt="doctor">
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="text-xl font-bold text-dark-charcoal">
+                            Dr. Anurag Verma
+                        </h3>
+
+                        <p class="text-sm text-smoky-blue-gray font-bold mt-1">
+                            MBBS, MD, Internal Medicine
+                        </p>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 mt-3 text-3xl">
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-gray-light1">★</span>
+
+                            <span class="text-sm text-gray-light1 ml-1">
+                                (118)
+                            </span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+                            <p>Zenith Hospital, Malad East</p>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="grid grid-cols-2 gap-3 mt-5">
+
+                            <button
+                                class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                <span class="material-symbols-outlined mini-icon">
+                                open_with
+                                </span>
+                                Directions
+                            </button>
+
+                            <button
+                                class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                <span class="material-symbols-outlined mini-icon">
+                                call
+                                </span>
+                                Call
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCTOR CARD -->
+                <div class="bg-white rounded-[10px] shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <div class="p-3">
+                        <img src="/assets/img/doctors/doctor-2.svg" class="w-full h-52 object-cover rounded-lg" alt="doctor">
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="text-xl font-bold text-dark-charcoal">
+                            Dr. Anjali Mahalaxmi
+                        </h3>
+
+                        <p class="text-sm text-smoky-blue-gray font-bold mt-1">
+                            MBBS, MD, Internal Medicine
+                        </p>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 mt-3 text-3xl">
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-gray-light1">★</span>
+
+                            <span class="text-sm text-gray-light1 ml-1">
+                                (118)
+                            </span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+                            <p>Zenith Hospital, Malad East</p>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="grid grid-cols-2 gap-3 mt-5">
+
+                            <button
+                                class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                <span class="material-symbols-outlined mini-icon">
+                                open_with
+                                </span>
+                                Directions
+                            </button>
+
+                            <button
+                                class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                <span class="material-symbols-outlined mini-icon">
+                                call
+                                </span>
+                                Call
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCTOR CARD -->
+                <div class="bg-white rounded-[10px] shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <div class="p-3">
+                        <img src="/assets/img/doctors/doctor-1.svg" class="w-full h-52 object-cover rounded-lg" alt="doctor">
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="text-xl font-bold text-dark-charcoal">
+                            Dr. Anurag Verma
+                        </h3>
+
+                        <p class="text-sm text-smoky-blue-gray font-bold mt-1">
+                            MBBS, MD, Internal Medicine
+                        </p>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 mt-3 text-3xl">
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-gray-light1">★</span>
+
+                            <span class="text-sm text-gray-light1 ml-1">
+                                (118)
+                            </span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+                            <p>Zenith Hospital, Malad East</p>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="grid grid-cols-2 gap-3 mt-5">
+
+                            <button
+                                class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                <span class="material-symbols-outlined mini-icon">
+                                open_with
+                                </span>
+                                Directions
+                            </button>
+
+                            <button
+                                class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                <span class="material-symbols-outlined mini-icon">
+                                call
+                                </span>
+                                Call
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOCTOR CARD -->
+                <div class="bg-white rounded-[10px] shadow-md border border-gray-100 overflow-hidden hover:shadow-lg transition">
+                    <div class="p-3">
+                        <img src="/assets/img/doctors/doctor-2.svg" class="w-full h-52 object-cover rounded-lg" alt="doctor">
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="text-xl font-bold text-dark-charcoal">
+                            Dr. Anjali Mahalaxmi
+                        </h3>
+
+                        <p class="text-sm text-smoky-blue-gray font-bold mt-1">
+                            MBBS, MD, Internal Medicine
+                        </p>
+
+                        <!-- Rating -->
+                        <div class="flex items-center gap-0.5 mt-3 text-3xl">
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-golden-yellow">★</span>
+                            <span class="text-gray-light1">★</span>
+
+                            <span class="text-sm text-gray-light1 ml-1">
+                                (118)
+                            </span>
+                        </div>
+
+                        <!-- Location -->
+                        <div class="flex items-center gap-2 mt-3 text-black text-sm">
+                            <span class="material-symbols-outlined">
+                                location_on
+                            </span>
+                            <p>Zenith Hospital, Malad East</p>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="grid grid-cols-2 gap-3 mt-5">
+
+                            <button
+                                class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                <span class="material-symbols-outlined mini-icon">
+                                open_with
+                                </span>
+                                Directions
+                            </button>
+
+                            <button
+                                class="border border-gray-light3 rounded-md py-2.5 flex items-center justify-center gap-2 text-gray text-sm hover:bg-gray-100 transition">
+                                <span class="material-symbols-outlined mini-icon">
+                                call
+                                </span>
+                                Call
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Banner -->
+        <section class="h-[316px] w-full bg-[url('/assets/img/doctor-banner.svg')] bg-no-repeat bg-cover mt-20">
+            <div class="flex items-center justify-start h-full px-18">
+                <div class="py-4 space-y-5">
+                    <div>
+                        <h3 class="text-2xl md:text-[32px] font-bold text-white leading-12">Are you a Doctor?</h3>
+                        <p class="text-sm md:text-base font-semibold text-light-yellow leading-6">Be a part of our panel of specialist from anywhere</p>
+                    </div>
+                    <button class="w-48 h-9 bg-light-yellow rounded-sm text-sm font-bold text-white flex items-center justify-center gap-2 cursor-pointer">
+                    Consult a doctor now
+                    <span class="w-4 h-4 rounded-full bg-white flex items-center justify-center">
+                        <span class="material-symbols-outlined mini-icon text-light-yellow">
+                        keyboard_arrow_right
+                        </span>
+                    </span>
+                </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-10 px-14 py-3 bg-[#DBF8F2]">
+            <!-- TOP REVIEW SUMMARY -->
+            <div class="max-w-3xl">
+
+                <!-- Rating Header -->
+                <div class="flex flex-wrap items-center gap-3 text-sm text-gray-600">
+
+                    <div class="flex items-center gap-1">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                        class="w-4 h-4"
+                        alt="google">
+
+                    <span class="font-semibold text-gray-800">
+                        4.6 Stars
+                    </span>
+                    </div>
+
+                    <span class="text-gray-300">|</span>
+
+                    <p>7+ Lakhs Ratings & Reviews</p>
+                </div>
+
+                <!-- Rating Bars -->
+                <div class="mt-6 space-y-3">
+
+                    <!-- BAR -->
+                    <div class="flex items-center gap-3">
+
+                    <span class="w-10 text-sm text-gray-600">
+                        5 Star
+                    </span>
+
+                    <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                        <div class="w-[84%] h-full bg-yellow-400 rounded-full"></div>
+                    </div>
+
+                    </div>
+
+                    <!-- BAR -->
+                    <div class="flex items-center gap-3">
+
+                    <span class="w-10 text-sm text-gray-600">
+                        4 Star
+                    </span>
+
+                    <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                        <div class="w-[75%] h-full bg-yellow-400 rounded-full"></div>
+                    </div>
+
+                    </div>
+
+                    <!-- BAR -->
+                    <div class="flex items-center gap-3">
+
+                    <span class="w-10 text-sm text-gray-600">
+                        3 Star
+                    </span>
+
+                    <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                        <div class="w-[66%] h-full bg-yellow-400 rounded-full"></div>
+                    </div>
+
+                    </div>
+
+                    <!-- BAR -->
+                    <div class="flex items-center gap-3">
+
+                    <span class="w-10 text-sm text-gray-600">
+                        2 Star
+                    </span>
+
+                    <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                        <div class="w-[57%] h-full bg-yellow-400 rounded-full"></div>
+                    </div>
+
+                    </div>
+
+                    <!-- BAR -->
+                    <div class="flex items-center gap-3">
+
+                    <span class="w-10 text-sm text-gray-600">
+                        1 Star
+                    </span>
+
+                    <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                        <div class="w-[14%] h-full bg-yellow-400 rounded-full"></div>
+                    </div>
+
+                    </div>
+
+                </div>
+
+                <!-- USERS -->
+                <div class="flex items-center gap-4 mt-8">
+
+                    <!-- Users -->
+                    <div class="flex -space-x-3">
+
+                    <img
+                        src="https://randomuser.me/api/portraits/women/45.jpg"
+                        class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                        alt="">
+
+                    <img
+                        src="https://randomuser.me/api/portraits/men/32.jpg"
+                        class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                        alt="">
+                    </div>
+
+                    <div>
+                    <h3 class="font-bold text-[#0f9d8f] text-lg">
+                        Over 10 million happy users
+                    </h3>
+
+                    <p class="text-gray-700 font-medium">
+                        PharmEasy Labs
+                    </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- REVIEWS -->
+            <div class="relative mt-10">
+
+                <!-- Quote -->
+                <div class="absolute -top-4 left-0 text-[80px] text-[#dbe7f3] leading-none font-serif">
+                    “
+                </div>
+
+                <!-- Scroll Area -->
+                <div
+                    class="flex gap-5 overflow-x-auto pb-4 pl-8 hide-scrollbar scroll-smooth no-scrollbar">
+
+                    <!-- CARD -->
+                    <div
+                    class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
+
+                    <p class="text-gray-600 text-sm leading-6">
+                        Doctor was very polite and explained everything clearly.
+                        Highly recommended.
+                    </p>
+
+                    <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
+
+                        <span class="material-symbols-outlined text-[18px]">
+                        person
+                        </span>
+
+                        <span class="font-medium text-gray-700">
+                        Pankaj Roy
+                        </span>
+
+                        <span>30 Apr '25</span>
+                    </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div
+                    class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
+
+                    <p class="text-gray-600 text-sm leading-6">
+                        Good experience, consultation was smooth and helpful.
+                    </p>
+
+                    <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
+
+                        <span class="material-symbols-outlined text-[18px]">
+                        person
+                        </span>
+
+                        <span class="font-medium text-gray-700">
+                        Suryabhan
+                        </span>
+
+                        <span>01 Jul '24</span>
+                    </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div
+                    class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
+
+                    <p class="text-gray-600 text-sm leading-6">
+                        Best gynecologist I've visited. Very caring and professional.
+                    </p>
+
+                    <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
+
+                        <span class="material-symbols-outlined text-[18px]">
+                        person
+                        </span>
+
+                        <span class="font-medium text-gray-700">
+                        Sana
+                        </span>
+
+                        <span>06 May '25</span>
+                    </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div
+                    class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
+
+                    <p class="text-gray-600 text-sm leading-6">
+                        Good experience, consultation was smooth and helpful.
+                    </p>
+
+                    <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
+
+                        <span class="material-symbols-outlined text-[18px]">
+                        person
+                        </span>
+
+                        <span class="font-medium text-gray-700">
+                        Suryabhan
+                        </span>
+
+                        <span>01 Jul '24</span>
+                    </div>
+                    </div>
+
+                    <!-- CARD -->
+                    <div
+                    class="min-w-[260px] md:min-w-[290px] bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
+
+                    <p class="text-gray-600 text-sm leading-6">
+                        Staff was supportive and reports were delivered on time.
+                    </p>
+
+                    <div class="border-t mt-8 pt-4 flex items-center gap-2 text-sm text-gray-500">
+
+                        <span class="material-symbols-outlined text-[18px]">
+                        person
+                        </span>
+
+                        <span class="font-medium text-gray-700">
+                        Aakash
+                        </span>
+
+                        <span>11 Jan '25</span>
+                    </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="mt-10 px-4 space-y-4 bg-gray-tint py-4">
+
+            <!-- FAQ ITEM -->
+            <div class="bg-white rounded-xl overflow-hidden">
+
+            <button
+                class="faq-btn w-full flex items-center justify-between px-5 py-5 text-left">
+
+                <span class="text-gray-800 font-medium text-sm md:text-base">
+                When will I get answer to my query?
+                </span>
+
+                <div
+                class="w-8 h-8 rounded-full bg-[#e9eef5] flex items-center justify-center shrink-0 transition duration-300">
+
+                <span class="material-symbols-outlined arrow">
+                    chevron_right
+                </span>
+                </div>
+
+            </button>
+
+            <!-- CONTENT -->
+            <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-6">
+                Our medical experts usually respond within 24 hours depending on
+                the type of consultation and availability.
+            </div>
+            </div>
+
+            <!-- FAQ ITEM -->
+            <div class="bg-white rounded-xl overflow-hidden">
+
+            <button
+                class="faq-btn w-full flex items-center justify-between px-5 py-5 text-left">
+
+                <span class="text-gray-800 font-medium text-sm md:text-base">
+                Who are the consulting doctors?
+                </span>
+
+                <div
+                class="w-8 h-8 rounded-full bg-[#e9eef5] flex items-center justify-center shrink-0 transition duration-300">
+
+                <span class="material-symbols-outlined arrow">
+                    chevron_right
+                </span>
+                </div>
+
+            </button>
+
+            <!-- CONTENT -->
+            <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-6">
+                All consultations are handled by certified and experienced
+                medical professionals from reputed hospitals and clinics.
+            </div>
+            </div>
+
+            <!-- FAQ ITEM -->
+            <div class="bg-white rounded-xl overflow-hidden">
+
+            <button
+                class="faq-btn w-full flex items-center justify-between px-5 py-5 text-left">
+
+                <span class="text-gray-800 font-medium text-sm md:text-base">
+                Will the doctor be able to resolve my problems?
+                </span>
+
+                <div
+                class="w-8 h-8 rounded-full bg-[#e9eef5] flex items-center justify-center shrink-0 transition duration-300">
+
+                <span class="material-symbols-outlined arrow">
+                    chevron_right
+                </span>
+                </div>
+
+            </button>
+
+            <!-- CONTENT -->
+            <div class="faq-content hidden px-5 pb-5 text-gray-600 text-sm leading-6">
+                Doctors will provide guidance, diagnosis support, and treatment
+                recommendations based on your symptoms and medical history.
+            </div>
+            </div>
+
+        </div>
+    </main>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    const faqButtons = document.querySelectorAll(".faq-btn");
+
+    faqButtons.forEach((button) => {
+
+      button.addEventListener("click", () => {
+
+        const content = button.nextElementSibling;
+        const arrow = button.querySelector(".arrow");
+
+        // Close all others
+        document.querySelectorAll(".faq-content").forEach((item) => {
+          if (item !== content) {
+            item.classList.add("hidden");
+          }
+        });
+
+        document.querySelectorAll(".arrow").forEach((icon) => {
+          if (icon !== arrow) {
+            icon.style.transform = "rotate(0deg)";
+          }
+        });
+
+        // Toggle current
+        content.classList.toggle("hidden");
+
+        if (!content.classList.contains("hidden")) {
+          arrow.style.transform = "rotate(90deg)";
+        } else {
+          arrow.style.transform = "rotate(0deg)";
+        }
+
+      });
+
+    });
+</script>
+</body>
+</html>
