@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <title>Document</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+     <style>
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            /* Hiding the default arrow from the summary tag */
+            summary::-webkit-details-marker {
+                display: none;
+            }
+        </style>
+</head>
+
+<body>
+    <!-- Header (unchanged) -->
+    <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+        <div class="max-w-[150px] max-h-10">
+            <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+        </div>
+        <nav>
+            <div>
+                <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
+                    <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></a>
+                        <ul
+                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group"><a class="flex items-center">Medicine <svg class="ml-1 w-4 h-4"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></a>
+                        <ul
+                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible">
+                            <li><a href="#" class="block px-4 py-2">Web Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></a></li>
+                    <li><a href="/src/records.html">Records</a></li>
+                    <li><a href="#">Rewards</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li>
+                        <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
+                            <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
+                                data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
+                        </div>
+                    </li>
+                    <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                </ul>
+            </div>
+            <ul id="mobile-menu"
+                class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
+                <li><a href="#" class="block">Home</a></li>
+                <li><a href="#" class="block">About</a></li>
+                <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                        <li><a href="#" class="block">Web Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="block">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="bg-gray-50 min-h-screen pb-12">
+        <div class="py-6 text-center" style="background: linear-gradient(135deg, #084433, #238B6D);">
+            <h2 class="text-[#FFFFFF] text-2xl font-bold">Flat 20% OFF on First Order</h2>
+            <p class="text-[#F5B326] text-sm mt-1">Upload prescription and we will do the rest for you!</p>
+        </div>
+
+
+        <div class="max-w-7xl mx-auto mt-8 px-4">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col lg:flex-row">
+
+                <div class="w-full lg:w-1/3 p-4 flex justify-center items-stretch border-r border-gray-100">
+                    <div
+                        class="w-full h-[450px] lg:h-[500px] bg-[#E9F9F4] rounded-xl overflow-hidden border border-gray-100 shadow-sm">
+                        <img src="/assets/img/Doctor.png" alt="Dr. Anjali Mehta"
+                            class="w-full h-full object-contain object-bottom">
+                    </div>
+                </div>
+
+                <div class="flex-1 p-6 border-r border-gray-100">
+                    <h1 class="text-3xl font-bold text-[#212B36]">Dr. Anjali Mehta</h1>
+                    <p class="text-[#1A504C] font-medium mt-1">MBBS, MD (Gynecology & Obstetrics)</p>
+                    <p class="text-[#1A7A5E] font-semibold mt-1">Gynecologist & Women's Health Specialist</p>
+
+                    <div class=" text-gray-700">
+                        <p class=" text-[#1A504C] text-teal-900 mt-1">14 Years of Experience</p>
+                        <p class=" text-[#1A504C] mt-1">Consultation Fee: <span class="">₹499</span></p>
+                        <p class=" text-[#1A504C] mt-1">Next Slot: <span class="text-[#1A504C] font-medium">Today, 10:00
+                                AM</span></p>
+                        <p class=" text-[#1A504C] mt-1"><span class="text-[#1A504C] mt-1">Languages Spoken:</span>
+                            English, Hindi, Assamese</p>
+                        <p class=" text-[#1A504C] mt-1"><span class="text-[#1A504C] mt-1">Timings:</span> Mon – Sat:
+                            10:00 AM – 7:00 PM</p>
+                    </div>
+
+                    <div class="mt-2">
+                        <h3 class=" text-[#212B36] mb-2">Consulation Mode</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-[#1A504C]">
+                                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                                Video Consultation
+                            </li>
+                            <li class="flex items-center gap-3 text-[#1A504C]">
+                                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                                Clinic Visit
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-96 p-6 bg-white">
+                    <h3 class="font-bold text-[#30363C] mb-4">Next Available Slots</h3>
+
+                    <div class="flex border-b border-gray-100 mb-" id="consult-tabs">
+                        <button data-type="online" class="flex-1 py-2 text-[#484848] font-medium transition-all">Consult
+                            Online</button>
+                        <button data-type="visit"
+                            class="flex-1 py-2 text-[#088178] font-bold border-b-2 border-emerald-700 transition-all">Visit
+                            Doctor</button>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-100 p-4 mb-6 shadow-sm">
+
+                        <div class="flex justify-between items-center mb-4">
+
+                            <!-- Month & Year Only -->
+                            <span id="currentMonthYear"
+                                class="bg-emerald-50 text-[#484848]  text-sm px-4 py-2 rounded-lg">
+                            </span>
+
+                            <!-- Arrows -->
+                            <div class="flex gap-4">
+                                <button onclick="changeMonth(-1)">
+                                    <i data-lucide="chevron-left" class="w-4 h-4 text-[#212B36]"></i>
+                                </button>
+
+                                <button onclick="changeMonth(1)">
+                                    <i data-lucide="chevron-right" class="w-4 h-4 text-[#212B36]"></i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="grid grid-cols-7 text-center text-[10px] text-gray-400 font-bold mb-2">
+                            <span>MON</span>
+                            <span>TUE</span>
+                            <span>WED</span>
+                            <span>THU</span>
+                            <span>FRI</span>
+                            <span>SAT</span>
+                            <span>SUN</span>
+                        </div>
+
+                        <div id="calendarGrid" class="grid grid-cols-7 text-center text-xs gap-y-2">
+                        </div>
+
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-2 mb- max-w-[420px]">
+
+                        <button
+                            class="time-slot border border-[#088178] text-emerald-700 py-2 px-2 rounded-lg text-[10px] font-medium hover:bg-emerald-600 hover:text-white transition-colors">
+                            04:45 PM
+                        </button>
+
+                        <button
+                            class="time-slot border border-[#088178] text-emerald-700 py-2 px-2 rounded-lg text-[10px] font-medium hover:bg-emerald-600 hover:text-white transition-colors">
+                            06:45 PM
+                        </button>
+
+                        <button
+                            class="time-slot border border-[#088178] text-emerald-700 py-2 px-2 rounded-lg text-[10px] font-medium hover:bg-emerald-600 hover:text-white transition-colors">
+                            11:45 AM
+                        </button>
+
+                        <button
+                            class="time-slot border border-[#088178] text-emerald-700 py-2 px-2 rounded-lg text-[10px] font-medium hover:bg-emerald-600 hover:text-white transition-colors">
+                            12:45 PM
+                        </button>
+
+                    </div>
+
+                    <div class="flex justify-between items-center mt-2 mb-2 pt- border-t border-gray-50">
+                        <span class="text-xs text-[#6E787E]">Consultation Fee</span>
+                        <span class="text-xs text-[#30363C] ">₹499.00</span>
+                    </div>
+
+                    <button
+                        class="w-full bg-[#1A7A5E] text-white py-2 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-teal-900 transition-all transform active:scale-95 shadow-lg shadow-emerald-100">
+                        Schedule Appointment
+                        <i data-lucide="arrow-right-circle" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <section class="max-w-7xl mx-auto mt-8 px-4 mb-12">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+
+                <h2 class="text-2xl  text-[#212B36] mb-4">About the Doctor</h2>
+
+                <p class="text-[#1A504C] leading-relaxed max-w-6xl">
+                    Dr. Kavita Sharma has over 12 years of experience in gynecology and obstetrics. She has helped
+                    thousands of patients with pregnancy care, PCOS, infertility, and general women's health issues. Her
+                    approach focuses on personalized care and patient comfort.
+                </p>
+
+                <div class="mt-8">
+                    <!-- <h3 class="text-sm text-[]  tracking-wide mb-4">Areas of Expertise</h3> -->
+                    <h3 class="text-sm text-[#212b36] tracking-wide mb-4">
+                        Areas of Expertise
+                    </h3>
+                    <div class="flex flex-wrap gap-5">
+                        <span
+                            class="px-5 py-2 bg-[#CAF8E4] text-[#1A7A5E] rounded-full font-bold text-sm border border-emerald-100">Heart
+                            disease</span>
+                        <span
+                            class="px-5 py-2 bg-[#CAF8E4] text-[#1A7A5E] rounded-full font-bold text-sm border border-emerald-100">Prevention
+                            Cardiology</span>
+                        <span
+                            class="px-5 py-2 bg-[#CAF8E4] text-[#1A7A5E] rounded-full font-bold text-sm border border-emerald-100">Hormonal
+                            Imbalance</span>
+                        <span
+                            class="px-5 py-2 bg-[#CAF8E4] text-[#1A7A5E] rounded-full font-bold text-sm border border-emerald-100">Angioplasty</span>
+                        <span
+                            class="px-5 py-2 bg-[#CAF8E4] text-[#1A7A5E] rounded-full font-bold text-sm border border-emerald-100">Arrhythmia</span>
+                        <span
+                            class="px-5 py-2 bg-[#CAF8E4] text-[#1A7A5E] rounded-full font-bold text-sm border border-emerald-100">Cholesterol
+                            Management</span>
+                        <span
+                            class="px-5 py-2 bg-[#CAF8E4] text-[#1A7A5E] rounded-full font-bold text-sm border border-emerald-100">Heart
+                            Failure</span>
+                        <span
+                            class="px-5 py-2 bg-[#CAF8E4] text-[#1A7A5E] rounded-full font-bold text-sm border border-emerald-100">Heart
+                            Disease</span>
+                        <span
+                            class="px-5 py-2 bg-[#CAF8E4] text-[#1A7A5E] rounded-full font-bold text-sm border border-emerald-100">Eczema
+                            & Psoriasis</span>
+                        <span
+                            class="px-5 py-2 bg-[#CAF8E4] text-[#1A7A5E] rounded-full font-bold text-sm border border-emerald-100">Pigmentation</span>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <h3 class="text-sm  text-[#212B36]  tracking-wide mb-6">Experience</h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-60">
+                        <div class="space-y-1">
+                            <p class=" text-[#1A504C] text-sm">Senior Gynecologist</p>
+                            <p class="text-[#1A504C] font-medium">Apollo Hospital, Guwahati 2018 – Present</p>
+                            <p class="text-[#1A504C] text-sm">Address: GS Road, Mumbai – 781006</p>
+                        </div>
+
+                        <div class="space-y-1">
+                            <p class="text-[#1A504C] text-sm">Consultant Gynecologist</p>
+                            <p class="text-[#1A504C] font-medium">Fortis Hospital, Kolkata</p>
+                            <p class="text-[#1A504C] text-sm">2014 – 2018</p>
+                        </div>
+
+                        <div class="space-y-1">
+                            <p class=" text-[#1A504C] text-sm">Junior Doctor</p>
+                            <p class="text-[#1A504C] font-medium">AIIMS Delhi</p>
+                            <p class="text-[#1A504C] text-sm">2012 – 2014</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto mt-8 px-4 mb-20">
+            <div class="bg-[#E9F9F4] rounded-xl p-8 relative overflow-hidden">
+
+                <!-- Rating Section -->
+                <div class="mb-10">
+                    <!-- SAME LINE -->
+                    <div class="flex items-center gap-2 mb-6 flex-wrap">
+                        <img src="/assets/img/GoogleIcon.svg" class="w-5 h-5" alt="Google">
+
+                        <span class="font-bold text-gray-800 text-sm">4.6 Stars</span>
+
+                        <!-- Stars -->
+                        <div class="flex items-center text-gray-300 text-xs gap-[2px]">
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-gray-300 text-gray-300"></i>
+                        </div>
+
+                        <span class="text-sm text-[#4F585E] border-l border-gray-300 pl-2">
+                            | 7+ Lakhs Ratings & Reviews
+                        </span>
+                    </div>
+
+                    <!-- Increased Slider Width -->
+                    <div class="space-y-2 max-w-2xl">
+                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                            <span class="w-10">5 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[83%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                            <span class="w-10">4 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[74%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                            <span class="w-10">3 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[66%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                            <span class="w-10">2 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[57%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-sm font-medium text-[#637381]">
+                            <span class="w-10">1 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[14%] rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Users -->
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="flex -space-x-2">
+                        <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                            src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=100"
+                            alt="User">
+
+                        <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=100"
+                            alt="User">
+                    </div>
+
+                    <div>
+                        <h3 class="text-[#10847E] font-semibold text-lg leading-tight">
+                            Over 10 million happy users
+                        </h3>
+
+                        <p class="text-[#30363C] font-semibold">Drodo</p>
+                    </div>
+                </div>
+
+                <!-- Quote -->
+                <i data-lucide="quote" class="absolute left-4 bottom-32 w-24 h-24 text-emerald-100 -z-0 opacity-50"></i>
+
+                <!-- BOXES untouched -->
+                <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide relative z-10">
+
+                    <div
+                        class="min-w-[280px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                        <p class="text-[#30363C] text-sm leading-relaxed mb-6">
+                            Doctor was very polite and explained everything clearly. Highly recommended.
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                                </div>
+
+                                <span class="text-sm font-bold text-[#4F585E]">
+                                    Pankaj Roy
+                                </span>
+                            </div>
+
+                            <span class="text-[10px] text-[#4F585E]">
+                                30 Apr '25
+                            </span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Good experience, consultation was smooth and helpful.
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                                </div>
+
+                                <span class="text-sm font-bold text-[#4F585E]">
+                                    Suryabhan...
+                                </span>
+                            </div>
+
+                            <span class="text-[10px] text-[#4F585E]">
+                                01 Jul '24
+                            </span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Best gynecologist I've visited. Very caring and professional.
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                                </div>
+
+                                <span class="text-sm font-bold text-[#4F585E]">
+                                    Sana
+                                </span>
+                            </div>
+
+                            <span class="text-[10px] text-[#4F585E]">
+                                06 May '25
+                            </span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Good experience, consultation was smooth and helpful.
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                                </div>
+
+                                <span class="text-sm font-bold text-[#4F585E]">
+                                    Suryabhan...
+                                </span>
+                            </div>
+
+                            <span class="text-[10px] text-[#4F585E]">
+                                01 Jul '24
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+       
+
+        <section class="max-w-7xl mx-auto mt-12 px-4 mb-20">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold text-[#212529]">Top Health Articles by Dr. Anjali Mehta</h2>
+                <div class="w-20 h-1 bg-emerald-500 mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <div class="group cursor-pointer">
+                    <div class="rounded-xl overflow-hidden mb-4 aspect-video">
+                        <img src="/assets/img/High-blood.svg" alt="Lab Research"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="font-bold text-[#111111] leading-snug mb-3 line-clamp-2">High Blood Pressure: Causes &
+                        Prevention</h3>
+                    <div class="flex items-center gap-2">
+                        <img src="/assets/img/blog-profile.svg" class="w-6 h-6 rounded-full object-cover" alt="Author">
+                        <p class="text-xs font-semibold text-[#696969] font-medium">Randy Osborne <span
+                                class="mx-1">|</span> 05-06-2024</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="rounded-xl overflow-hidden mb-4 aspect-video">
+                        <img src="/assets/img/Understanding-PCOS.svg" alt="Health Care"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="font-bold text-[#111111] leading-snug mb-3 line-clamp-2">Understanding PCOS</h3>
+                    <div class="flex items-center gap-2">
+                        <img src="/assets/img/blog-profile.svg" class="w-6 h-6 rounded-full object-cover" alt="Author">
+                        <p class="text-xs font-semibold text-[#696969] font-medium">Randy Osborne <span
+                                class="mx-1">|</span> 05-06-2024</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="rounded-xl overflow-hidden mb-4 aspect-video">
+                        <img src="/assets/img/High-blood.svg" alt="Lab Research"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="font-bold text-[#111111] leading-snug mb-3 line-clamp-2">Women's Health After 30</h3>
+                    <div class="flex items-center gap-2">
+                        <img src="/assets/img/blog-profile.svg" class="w-6 h-6 rounded-full object-cover" alt="Author">
+                        <p class="text-xs font-semibold text-[#696969] font-medium">Randy Osborne <span
+                                class="mx-1">|</span> 05-06-2024</p>
+                    </div>
+                </div>
+
+                <div class="group cursor-pointer">
+                    <div class="rounded-xl overflow-hidden mb-4 aspect-video">
+                        <img src="/assets/img/Understanding-PCOS.svg" alt="Health Care"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h2 class="font-bold text-[#111111] leading-snug mb-3 line-clamp-2">How to Keep Your Heart Healthy
+                        Naturally</h2>
+                    <div class="flex items-center gap-2">
+                        <img src="/assets/img/blog-profile.svg" class="w-6 h-6 rounded-full object-cover" alt="Author">
+                        <p class="text-xs font-semibold text-[#696969] font-medium">Randy Osborne <span
+                                class="mx-1">|</span> 05-06-2024</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto mt-12 px-4 mb-20">
+            <h2 class="text-lg font-bold text-[#30363C] mb-8">People Also Ask</h2>
+
+            <div class="flex flex-col gap-5">
+                <!-- Each FAQ item gets consistent min-height and expands naturally -->
+                <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                    style="min-height: 64px;">
+                    <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                        <span class="text-sm font-semibold text-[#30363C]">How can I book an appointment?</span>
+                        <div
+                            class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                        </div>
+                    </summary>
+                    <div class="px-5 pb-5 pt-3 text-sm text-[#4F585E] border-t border-gray-100">
+                        You can book directly by selecting a time slot and clicking "Book Appointment".
+                    </div>
+                </details>
+
+                <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                    style="min-height: 64px;">
+                    <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                        <span class="text-sm font-semibold text-[#30363C]">Is online consultation available?</span>
+                        <div
+                            class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                        </div>
+                    </summary>
+                    <div class="px-5 pb-5 pt-3 text-sm text-[#4F585E] border-t border-gray-100">
+                        Yes, video consultations are available for select slots.
+                    </div>
+                </details>
+
+                <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                    style="min-height: 64px;">
+                    <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                        <span class="text-sm font-semibold text-[#30363C]">What conditions does this doctor
+                            treat?</span>
+                        <div
+                            class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                        </div>
+                    </summary>
+                    <div class="px-5 pb-5 pt-3 text-sm text-[#4F585E] border-t border-gray-100">
+                        Dr. Anjali Mehta specializes in pregnancy care, PCOS, infertility, and general women's health
+                        issues.
+                    </div>
+                </details>
+
+                <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                    style="min-height: 64px;">
+                    <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                        <span class="text-sm font-semibold text-[#30363C]">What is the consultation fee?</span>
+                        <div
+                            class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                        </div>
+                    </summary>
+                    <div class="px-5 pb-5 pt-3 text-sm text-[#4F585E] border-t border-gray-100">
+                        The standard consultation fee is ₹499.
+                    </div>
+                </details>
+
+                <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+                    style="min-height: 64px;">
+                    <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                        <span class="text-sm font-semibold text-[#30363C]">What are the doctor's clinic timings?</span>
+                        <div
+                            class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+                            <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                        </div>
+                    </summary>
+                    <div class="px-5 pb-5 pt-3 text-sm text-[#4F585E] border-t border-gray-100">
+                        The clinic is open Mon – Sat: 10:00 AM – 7:00 PM.
+                    </div>
+                </details>
+            </div>
+
+            <!-- Button with same height as each FAQ item (64px) -->
+            <div class="mt-5">
+                <button
+                    class="w-full h-16 bg-white border border-gray-200 rounded-xl text-sm text-[#4F585E] hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-2">
+                    View More Questions
+                    <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </section>
+
+       
+
+       
+
+
+        <footer class="bg-[#d5e3e0] pt-16 pb-8">
+            <div class="max-w-8xl mx-auto px-4 md:px-10 lg:px-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+
+                    <div class="lg:col-span-1">
+                        <div class="flex items-center gap-2 mb-6">
+                            <img src="/assets/img/logo.png" alt="Drodo" class="h-8">
+                        </div>
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><span class="font-semibold text-[#111111]">Phone:</span> (+123) 456-7898</p>
+                            <p><span class="font-semibold text-[#111111]">Email:</span> hello@drodo.com</p>
+                            <p><span class="font-semibold text-[#111111]">Address:</span> 6890 Blvd, The Bronx, NY 1058,
+                                USA</p>
+                        </div>
+
+                        <div class="flex gap-1 mt-6">
+                            <a href=""><img src="/assets/img/Item → Link.svg" alt=""></a>
+                            <a href=""><img src="/assets/img/Item → Link (1).svg" alt=""></a>
+                            <a href=""><img src="/assets/img/Item → Link (2).svg" alt=""></a>
+                            <a href=""><img src="/assets/img/Item → Link (3).svg" alt=""></a>
+                            <a href=""><img src="/assets/img/Item → Link (4).svg" alt=""></a>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-[#212529] mb-6 relative">
+                            Information
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-emerald-500"></span>
+                        </h4>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• About Us</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Contact Us</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-6 relative">
+                            Customer Care
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-emerald-500"></span>
+                        </h4>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• My Account</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Order History</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Wishlist</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Records</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Rewards</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Help & FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-6 relative">
+                            Policy
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-emerald-500"></span>
+                        </h4>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Purchasing Policy</a>
+                            </li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Orders and Returns</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:col-span-1">
+                        <h4 class="font-bold text-gray-800 mb-6 relative">
+                            Newsletter
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-emerald-500"></span>
+                        </h4>
+                        <p class="text-sm text-gray-600 mb-4">Sign up for our mailing list to get the latest updates &
+                            offers.</p>
+                        <div class="space-y-3">
+                            <input type="email" placeholder="Enter your email address"
+                                class="w-full px-4 py-3 rounded-md bg-white/50 border border-transparent focus:border-emerald-500 focus:outline-none text-sm">
+                            <button
+                                class="w-full bg-[#238B6D] hover:bg-emerald-800 text-white font-bold py-3 rounded-md transition-colors text-sm">
+                                Subscribe Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mt-16 pt-8 border-t border-gray-300 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-sm text-gray-500">@ Avatar. Designed By Aibuzz</p>
+                    <div class="flex items-center gap-4">
+                        <span class="text-sm text-gray-500">We accept payment via:</span>
+                        <div class="flex gap-2">
+                            <img src="/assets/img/VISA1.svg" alt="">
+                            <img src="/assets/img/2ndvia.svg" alt="">
+                            <img src="/assets/img/paypal.svg" alt="">
+                            <img src="/assets/img/4thvia.svg" alt="">
+                            <img src="/assets/img/Discover.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+ <script src="/script/doctor-description.js"></script>
+   
+</body>
+
+</html>
