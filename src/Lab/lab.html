@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/output.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <title>Lab</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+     
+</head>
+
+<body>
+    
+    <header class="nav-menu-records md:px-5 lg:px-20 py-2 mx-auto flex items-center justify-between relative z-10">
+        <div class="max-w-[150px] max-h-10">
+            <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
+        </div>
+        <nav>
+            <div>
+                <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <ul id="menu" class="hidden md:flex md:space-x-2 md:pl-3 lg:pl-0 lg:space-x-6 items-center">
+                    <li class="relative group"><a class="flex items-center">Home <svg class="ml-1 w-4 h-4" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></a>
+                        <ul
+                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 ease-in-out z-10">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">Web Design</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-blue-100">SEO</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group"><a class="flex items-center">Medicine <svg class="ml-1 w-4 h-4"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></a>
+                        <ul
+                            class="submenu absolute left-0 top-full mt-2 w-40 bg-white text-gray-800 rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible">
+                            <li><a href="#" class="block px-4 py-2">Web Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="relative group"><a class="flex items-center">Maps <svg class="ml-1 w-4 h-4" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg></a></li>
+                    <li><a href="/src/records.html">Records</a></li>
+                    <li><a href="#">Rewards</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li>
+                        <div class="bg-sea-green-deep text-white md:p-1 lg:p-2 rounded-[10px] flex items-center gap-2">
+                            <p class="font-semibold lg:text-sm md:text-xs text-nowrap">Referral - JH2JK123</p><i
+                                data-lucide="copy" class="w-[18px] h-[18px] cursor-pointer"></i>
+                        </div>
+                    </li>
+                    <li><img src="/assets/img/blog-profile.svg" alt="profile"></li>
+                </ul>
+            </div>
+            <ul id="mobile-menu"
+                class="md:hidden hidden flex-col space-y-2 mt-15 mr-5 rounded-md text-white px-4 bg-white">
+                <li><a href="#" class="block">Home</a></li>
+                <li><a href="#" class="block">About</a></li>
+                <li><button id="mobile-submenu-btn" class="flex items-center w-full">Services <svg class="ml-1 w-4 h-4"
+                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg></button>
+                    <ul id="mobile-submenu" class="hidden flex-col pl-4 mt-1 space-y-1">
+                        <li><a href="#" class="block">Web Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="block">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="bg-gray-50 min-h-screen pb-12">
+        <div class="py-6 text-center" style="background: linear-gradient(135deg, #084433, #238B6D);">
+            <h2 class="text-white text-2xl font-bold">Flat 20% OFF on First Order</h2>
+            <p class="text-[#F5B326] text-sm mt-1">Upload prescription and we will do the rest for you!</p>
+        </div>
+
+
+        <div class="max-w-7xl mx-auto mt-8 px-4">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden flex flex-col lg:flex-row">
+
+                <div class="w-full lg:w-1/3 p-4 flex justify-center items-stretch border-r border-gray-100">
+                    <div
+                        class="w-full h-[450px] lg:h-[500px] bg-[#E9F9F4] rounded-xl overflow-hidden border border-gray-100 shadow-sm">
+                        <img src="/assets/img/Container.svg" alt="Dr. Anjali Mehta"
+                            class="w-full h-full object-contain object-bottom">
+                    </div>
+                </div>
+
+               <div class="flex-1 p-6 border-r border-gray-100">
+    <h1 class="text-3xl font-bold text-gray">MedLife Diagnostics Center</h1>
+
+    <p class="text-sea-green-dark2 font-medium mt-2">
+        Accurate Reports & Trusted Results
+    </p>
+
+    <p class="text-sea-green-dark2 font-medium mt-2">
+        10+ Year Experience
+    </p>
+
+    <div class="text-gray-700">
+        <p class="text-[#1A504C] text-teal-900 mt-2">
+            Location: Kolkata, India
+        </p>
+
+        <p class="text-[#1A504C] mt-2">
+            Open: 7:00 AM – 9:00 PM
+            <span class="">₹499</span>
+        </p>
+
+        <p class="text-[#1A504C] mt-2">
+            Home Sample Collection Available
+        </p>
+    </div>
+
+    <div class="mt-3">
+        <h3 class="text-gray mb-2">Recommended Packages</h3>
+
+        <ul class="space-y-3">
+            <li class="flex items-center gap-3 text-sea-green-dark2">
+                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                Full Body Checkup – ₹1499
+            </li>
+
+            <li class="flex items-center gap-3 text-sea-green-dark2">
+                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                Senior Citizen Package – ₹1999
+            </li>
+
+            <li class="flex items-center gap-3 text-sea-green-dark2">
+                <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                Women Wellness Package – ₹1299
+            </li>
+        </ul>
+
+        
+       <div class="flex justify-end mt-6">
+    <button
+        class="w-[262px] h-12 bg-[#088178] hover:bg-[#06695f] text-white text-[15px] font-semibold rounded-lg shadow-[0px_8px_16px_rgba(8,129,120,0.24)] transition-all duration-300">
+        Book Lab Test
+    </button>
+</div>
+
+    </div>
+</div>
+
+                <div class="w-full lg:w-96 p-6 bg-white">
+                    <h3 class="font-bold text-light-blackk mb-4">Next Available Slots</h3>
+
+                    <div class="flex border-b border-gray-100 mb-" id="consult-tabs">
+                        <button data-type="online" class="flex-1 py-2 text-dark-gray font-medium transition-all">Consult
+                            Online</button>
+                        <button data-type="visit"
+                            class="flex-1 py-2 text-sea-green2 font-bold border-b-2 border-emerald-700 transition-all">Visit
+                            Doctor</button>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-100 p-4 mb-6 shadow-sm">
+
+                        <div class="flex justify-between items-center mb-4">
+
+                            <!-- Month & Year Only -->
+                            <span id="currentMonthYear"
+                                class="bg-emerald-50 text-dark-gray  text-sm px-4 py-2 rounded-lg">
+                            </span>
+
+                            <!-- Arrows -->
+                            <div class="flex gap-4">
+                                <button onclick="changeMonth(-1)">
+                                    <i data-lucide="chevron-left" class="w-4 h-4 text-gray"></i>
+                                </button>
+
+                                <button onclick="changeMonth(1)">
+                                    <i data-lucide="chevron-right" class="w-4 h-4 text-gray"></i>
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="grid grid-cols-7 text-center text-[10px] text-gray-400 font-bold mb-2">
+                            <span>MON</span>
+                            <span>TUE</span>
+                            <span>WED</span>
+                            <span>THU</span>
+                            <span>FRI</span>
+                            <span>SAT</span>
+                            <span>SUN</span>
+                        </div>
+
+                        <div id="calendarGrid" class="grid grid-cols-7 text-center text-xs gap-y-2">
+                        </div>
+
+                    </div>
+
+                    <div class="grid grid-cols-4 gap-2 mb- max-w-[420px]">
+
+                        <button
+                            class="time-slot border border-sea-green2 text-emerald-700 py-2 px-2 rounded-lg text-[10px] font-medium hover:bg-emerald-600 hover:text-white transition-colors">
+                            04:45 PM
+                        </button>
+
+                        <button
+                            class="time-slot border border-sea-green2 text-emerald-700 py-2 px-2 rounded-lg text-[10px] font-medium hover:bg-emerald-600 hover:text-white transition-colors">
+                            06:45 PM
+                        </button>
+
+                        <button
+                            class="time-slot border border-sea-green2 text-emerald-700 py-2 px-2 rounded-lg text-[10px] font-medium hover:bg-emerald-600 hover:text-white transition-colors">
+                            11:45 AM
+                        </button>
+
+                        <button
+                            class="time-slot border border-sea-green2 text-emerald-700 py-2 px-2 rounded-lg text-[10px] font-medium hover:bg-emerald-600 hover:text-white transition-colors">
+                            12:45 PM
+                        </button>
+
+                    </div>
+
+                    <div class="flex justify-between items-center mt-2 mb-2 pt- border-t border-gray-50">
+                        <span class="text-xs text-[#6E787E]">Consultation Fee</span>
+                        <span class="text-xs text-light-blackk ">₹499.00</span>
+                    </div>
+
+                    <button
+                        class="w-full bg-[#1A7A5E] text-white py-2 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-teal-900 transition-all transform active:scale-95 shadow-lg shadow-emerald-100">
+                        Schedule Appointment
+                        <i data-lucide="arrow-right-circle" class="w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <section class="max-w-7xl mx-auto mt-8 px-4 mb-12">
+            <div class="bg-gray-50 rounded-xl shadow-sm border border-gray-100 p-8">
+
+                <h2 class="text-2xl  text-gray mb-4">About the Lab</h2>
+
+                <p class="text-sea-green-dark2 text-sm leading-8 max-w-6xl">
+                   MedLife Diagnostics Center is a trusted and certified laboratory committed to delivering accurate, timely, and reliable diagnostic services. With state-of-the-art equipment and advanced testing technologies, the lab ensures precise results that help in early diagnosis and effective treatment planning.
+Our team of skilled pathologists and technicians follow strict quality control measures and adhere to industry standards to maintain consistency and accuracy in every report. We offer a wide range of diagnostic services including blood tests, full body checkups, hormone tests, and specialized screenings. For added convenience, MedLife Diagnostics also provides home sample collection services, ensuring a hassle-free experience for patients. With a strong emphasis on efficiency, transparency, and patient care, we aim to make diagnostic testing simple, accessible, and trustworthy for everyone.
+                </p>
+
+                <div class="mt-8">
+                    <!-- <h3 class="text-sm text-[]  tracking-wide mb-4">Areas of Expertise</h3> -->
+                    <h3 class="text-sm text-gray tracking-wide mb-4">
+                        Test Categories
+                    </h3>
+                    <div class="flex flex-wrap gap-5">
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100 tracking-wide">Blood Test</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Fully Body Checkup</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Diabetes</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Thyroid</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Vitamin Tests</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Covid Test</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Liver Function</span>
+
+                            <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Kidney Function</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Heart
+                            Disease</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Eczema
+                            & Psoriasis</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Pigmentation</span>
+                    </div>
+                </div>
+
+
+
+                <div class="mt-8">
+                    <!-- <h3 class="text-sm text-[]  tracking-wide mb-4">Areas of Expertise</h3> -->
+                    <h3 class="text-sm text-gray tracking-wide mb-4">
+                        Popular Test Section
+                    </h3>
+                    <div class="flex flex-wrap gap-5">
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Complete Blood Count (CBC)</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Thyroid Profile (T3,T4,TSH)</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Lipid Profile</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Blood Sugar(Fasting)</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Vitamin D Tests</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Kidney Function</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Heart Disease</span>
+
+                           
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Eczema
+                            & Psoriasis</span>
+                        <span
+                            class="px-5 py-2 bg-mint-cream text-sea-green-dark1 rounded-full font-semibold text-sm border border-emerald-100">Pigmentation</span>
+                    </div>
+                </div>
+
+               
+
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+<section class="max-w-7xl mx-auto mt-12 px-4">
+    <div class="bg-white rounded-2xl py-14 px-6 shadow-sm border border-gray-100">
+
+        <!-- Heading -->
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-night-black">
+                Why Choose Us
+            </h2>
+        </div>
+
+        <!-- Features -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+
+            <!-- Item -->
+            <div class="flex flex-col items-center">
+                <h3 class="text-3xl font-bold text-sea-green-deep mb-3">
+                    20K +
+                </h3>
+
+                <p class="text-night-black font-semibold text-sm leading-relaxed">
+                    NABL Certified Lab
+                </p>
+            </div>
+
+            <!-- Item -->
+            <div class="flex flex-col items-center">
+                <h3 class="text-3xl font-bold text-sea-green-deep mb-3">
+                    2K +
+                </h3>
+
+                <p class="text-night-black font-semibold text-sm leading-relaxed">
+                    Accurate & Reliable Reports
+                </p>
+            </div>
+
+            <!-- Item -->
+            <div class="flex flex-col items-center">
+                <h3 class="text-3xl font-bold text-sea-green-deep mb-3">
+                    30 +
+                </h3>
+
+                <p class="text-night-black font-semibold text-sm leading-relaxed">
+                    Home Sample Collection
+                </p>
+            </div>
+
+            <!-- Item -->
+            <div class="flex flex-col items-center">
+                <h3 class="text-3xl font-bold text-sea-green-deep mb-3">
+                    30 +
+                </h3>
+
+                <p class="text-night-black font-semibold text-sm leading-relaxed">
+                    Quick Report Delivery
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+        <section class="max-w-7xl mx-auto mt-8 px-4 mb-20">
+            <div class="bg-[#E9F9F4] rounded-xl p-8 relative overflow-hidden">
+
+                <!-- Rating Section -->
+                <div class="mb-10">
+                    <!-- SAME LINE -->
+                    <div class="flex items-center gap-2 mb-6 flex-wrap">
+                        <img src="/assets/img/GoogleIcon.svg" class="w-5 h-5" alt="Google">
+
+                        <span class="font-bold text-gray-800 text-sm">4.6 Stars</span>
+
+                        <!-- Stars -->
+                        <div class="flex items-center text-gray-300 text-xs gap-[2px]">
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-yellow-400 text-yellow-400"></i>
+                            <i data-lucide="star" class="w-3 h-3 fill-gray-300 text-gray-300"></i>
+                        </div>
+
+                        <span class="text-sm text-gray-darkk border-l border-gray-300 pl-2">
+                            | 7+ Lakhs Ratings & Reviews
+                        </span>
+                    </div>
+
+                    <!-- Increased Slider Width -->
+                    <div class="space-y-2 max-w-2xl">
+                        <div class="flex items-center gap-4 text-sm font-medium text-gray-dark-1">
+                            <span class="w-10">5 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[83%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-sm font-medium text-gray-dark-1">
+                            <span class="w-10">4 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[74%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-sm font-medium text-gray-dark-1">
+                            <span class="w-10">3 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[66%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-sm font-medium text-gray-dark-1">
+                            <span class="w-10">2 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[57%] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-sm font-medium text-gray-dark-1">
+                            <span class="w-10">1 Star</span>
+                            <div class="flex-1 h-2 bg-gray-200 rounded-full overflow-hidden">
+                                <div class="bg-yellow-400 h-full w-[14%] rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Users -->
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="flex -space-x-2">
+                        <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                            src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=100"
+                            alt="User">
+
+                        <img class="w-10 h-10 rounded-full border-2 border-white object-cover"
+                            src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=100"
+                            alt="User">
+                    </div>
+
+                    <div>
+                        <h3 class="text-[#10847E] font-semibold text-lg leading-tight">
+                            Over 10 million happy users
+                        </h3>
+
+                        <p class="text-light-blackk font-semibold">PharmEasy Lab</p>
+                    </div>
+                </div>
+
+                <!-- Quote -->
+                <i data-lucide="quote" class="absolute left-4 bottom-32 w-24 h-24 text-emerald-100 -z-0 opacity-50"></i>
+
+                <!-- BOXES untouched -->
+                <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide relative z-10">
+
+                    <div
+                        class="min-w-[280px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                        <p class="text-light-blackk text-sm leading-relaxed mb-6">
+                            Doctor was very polite and explained everything clearly. Highly recommended.
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                                </div>
+
+                                <span class="text-sm font-bold text-gray-darkk">
+                                    Pankaj Roy
+                                </span>
+                            </div>
+
+                            <span class="text-[10px] text-gray-darkk">
+                                30 Apr '25
+                            </span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Good experience, consultation was smooth and helpful.
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                                </div>
+
+                                <span class="text-sm font-bold text-gray-darkk">
+                                    Suryabhan...
+                                </span>
+                            </div>
+
+                            <span class="text-[10px] text-gray-darkk">
+                                01 Jul '24
+                            </span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Best gynecologist I've visited. Very caring and professional.
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                                </div>
+
+                                <span class="text-sm font-bold text-gray-darkk">
+                                    Sana
+                                </span>
+                            </div>
+
+                            <span class="text-[10px] text-gray-darkk">
+                                06 May '25
+                            </span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="min-w-[280px] bg-white rounded-xl p-6 shadow-sm flex flex-col justify-between border border-emerald-50">
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Good experience, consultation was smooth and helpful.
+                        </p>
+
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                            <div class="flex items-center gap-2">
+                                <div class="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center">
+                                    <i data-lucide="user" class="w-3 h-3 text-gray-400"></i>
+                                </div>
+
+                                <span class="text-sm font-bold text-gray-darkk">
+                                    Suryabhan...
+                                </span>
+                            </div>
+
+                            <span class="text-[10px] text-gray-darkk">
+                                01 Jul '24
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+       
+
+
+       <section class="max-w-7xl mx-auto mt-12 px-4 mb-20">
+    <h2 class="text-lg font-bold text-light-blackk mb-8">People Also Ask</h2>
+
+    <div class="flex flex-col gap-5">
+
+        <!-- FAQ 1 -->
+        <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+            style="min-height: 64px;">
+
+            <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                <span class="text-sm font-semibold text-light-blackk">
+                    How can I book an appointment?
+                </span>
+
+                <div
+                    class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                </div>
+            </summary>
+
+            <div class="px-5 pb-5 pt-3 text-sm text-gray-darkk border-t border-gray-100">
+                You can book directly by selecting a time slot and clicking “Book Appointment”.
+            </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+            style="min-height: 64px;">
+
+            <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                <span class="text-sm font-semibold text-light-blackk">
+                    Is home sample collection available?
+                </span>
+
+                <div
+                    class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                </div>
+            </summary>
+
+            <div class="px-5 pb-5 pt-3 text-sm text-gray-darkk border-t border-gray-100">
+                Yes, home sample collection services are available for selected tests and packages.
+            </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+            style="min-height: 64px;">
+
+            <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                <span class="text-sm font-semibold text-light-blackk">
+                    What diagnostic services are available?
+                </span>
+
+                <div
+                    class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                </div>
+            </summary>
+
+            <div class="px-5 pb-5 pt-3 text-sm text-gray-darkk border-t border-gray-100">
+                The lab provides blood tests, full body checkups, thyroid tests, diabetes screening, hormone tests, and other specialized diagnostic services.
+            </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+            style="min-height: 64px;">
+
+            <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                <span class="text-sm font-semibold text-light-blackk">
+                    What is the starting price for tests?
+                </span>
+
+                <div
+                    class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                </div>
+            </summary>
+
+            <div class="px-5 pb-5 pt-3 text-sm text-gray-darkk border-t border-gray-100">
+                Consultation and diagnostic packages start from ₹499 depending on the selected test or health package.
+            </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+            style="min-height: 64px;">
+
+            <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                <span class="text-sm font-semibold text-light-blackk">
+                    What are the lab timings?
+                </span>
+
+                <div
+                    class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                </div>
+            </summary>
+
+            <div class="px-5 pb-5 pt-3 text-sm text-gray-darkk border-t border-gray-100">
+                The diagnostic center is open daily from 7:00 AM to 9:00 PM for sample collection and report assistance.
+            </div>
+        </details>
+
+        <!-- FAQ 6 -->
+        <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+            style="min-height: 64px;">
+
+            <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                <span class="text-sm font-semibold text-light-blackk">
+                    Is prior appointment required before visiting the lab?
+                </span>
+
+                <div
+                    class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                </div>
+            </summary>
+
+            <div class="px-5 pb-5 pt-3 text-sm text-gray-darkk border-t border-gray-100">
+                Yes, prior booking is recommended to ensure faster service and preferred appointment slots.
+            </div>
+        </details>
+
+        <!-- FAQ 7 -->
+        <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+            style="min-height: 64px;">
+
+            <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                <span class="text-sm font-semibold text-light-blackk">
+                    Can I reschedule or cancel my appointment?
+                </span>
+
+                <div
+                    class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                </div>
+            </summary>
+
+            <div class="px-5 pb-5 pt-3 text-sm text-gray-darkk border-t border-gray-100">
+                Yes, appointments can be rescheduled or cancelled through customer support or the booking portal.
+            </div>
+        </details>
+
+        <!-- FAQ 8 -->
+        <details class="faq-item group bg-white border border-gray-200 rounded-xl overflow-hidden"
+            style="min-height: 64px;">
+
+            <summary class="flex items-center justify-between px-5 h-16 cursor-pointer list-none">
+                <span class="text-sm font-semibold text-light-blackk">
+                    Are emergency diagnostic services available?
+                </span>
+
+                <div
+                    class="w-8 h-8 bg-blue-50 rounded-full flex items-center justify-center shrink-0 group-open:rotate-180 transition-transform duration-300">
+
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-gray-600"></i>
+                </div>
+            </summary>
+
+            <div class="px-5 pb-5 pt-3 text-sm text-gray-darkk border-t border-gray-100">
+                Emergency and urgent diagnostic testing services are available for selected tests, subject to slot availability.
+            </div>
+        </details>
+
+    </div>
+
+    <!-- View More Button -->
+    <div class="mt-5">
+        <button
+            class="w-full h-16 bg-white border border-gray-200 rounded-xl text-sm text-gray-darkk hover:bg-gray-50 transition-all duration-300 flex items-center justify-center gap-2">
+
+            View More Questions
+
+            <i data-lucide="arrow-down" class="w-4 h-4"></i>
+        </button>
+    </div>
+</section>
+
+        <footer class="bg-[#d5e3e0] pt-16 pb-8">
+            <div class="max-w-8xl mx-auto px-4 md:px-10 lg:px-20">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+
+                    <div class="lg:col-span-1">
+                        <div class="flex items-center gap-2 mb-6">
+                            <img src="/assets/img/logo.png" alt="Drodo" class="h-8">
+                        </div>
+                        <div class="space-y-3 text-sm text-gray-600">
+                            <p><span class="font-semibold text-dark-charcoal">Phone:</span> (+123) 456-7898</p>
+                            <p><span class="font-semibold text-dark-charcoal">Email:</span> hello@drodo.com</p>
+                            <p><span class="font-semibold text-dark-charcoal">Address:</span> 6890 Blvd, The Bronx, NY 1058,
+                                USA</p>
+                        </div>
+
+                        <div class="flex gap-1 mt-6">
+                            <a href=""><img src="/assets/img/Item → Link.svg" alt=""></a>
+                            <a href=""><img src="/assets/img/Item → Link (1).svg" alt=""></a>
+                            <a href=""><img src="/assets/img/Item → Link (2).svg" alt=""></a>
+                            <a href=""><img src="/assets/img/Item → Link (3).svg" alt=""></a>
+                            <a href=""><img src="/assets/img/Item → Link (4).svg" alt=""></a>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-gray-dark mb-6 relative">
+                            Information
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-emerald-500"></span>
+                        </h4>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• About Us</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Contact Us</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Careers</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-6 relative">
+                            Customer Care
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-emerald-500"></span>
+                        </h4>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• My Account</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Order History</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Wishlist</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Records</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Rewards</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Help & FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-6 relative">
+                            Policy
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-emerald-500"></span>
+                        </h4>
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Purchasing Policy</a>
+                            </li>
+                            <li><a href="#" class="hover:text-emerald-700 transition-colors">• Orders and Returns</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="lg:col-span-1">
+                        <h4 class="font-bold text-gray-800 mb-6 relative">
+                            Newsletter
+                            <span class="absolute -bottom-2 left-0 w-8 h-0.5 bg-emerald-500"></span>
+                        </h4>
+                        <p class="text-sm text-gray-600 mb-4">Sign up for our mailing list to get the latest updates &
+                            offers.</p>
+                        <div class="space-y-3">
+                            <input type="email" placeholder="Enter your email address"
+                                class="w-full px-4 py-3 rounded-md bg-white/50 border border-transparent focus:border-emerald-500 focus:outline-none text-sm">
+                            <button
+                                class="w-full bg-sea-green-deep hover:bg-emerald-800 text-white font-bold py-3 rounded-md transition-colors text-sm">
+                                Subscribe Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mt-16 pt-8 border-t border-gray-300 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-sm text-gray-500">@ Avatar. Designed By Aibuzz</p>
+                    <div class="flex items-center gap-4">
+                        <span class="text-sm text-gray-500">We accept payment via:</span>
+                        <div class="flex gap-2">
+                            <img src="/assets/img/VISA1.svg" alt="">
+                            <img src="/assets/img/2ndvia.svg" alt="">
+                            <img src="/assets/img/paypal.svg" alt="">
+                            <img src="/assets/img/4thvia.svg" alt="">
+                            <img src="/assets/img/Discover.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+ <script src="/script/doctor-description.js"></script>
+   
+</body>
+
+</html>

@@ -7,6 +7,8 @@
   --color-gray: #212B36;
 
   --color-gray-dark-1: #637381;
+  --color-light-blackk:#30363C;
+  --color-gray-darkk :#4F585E;
   --color-gray-light: #F8FAFC;
   --color-gray-light1: #919EAB;
   --color-gray-light2: #637381;
@@ -44,6 +46,7 @@
   --color-sea-green-deep: #238B6D;
   --color-sea-green-dark: #407672;
   --color-sea-green-dark1: #1A7A5E;
+  --color-sea-green-dark2: #1A504C;
   --color-dark-slate: #212529;
   --color-muted-rose: #FF6F6180;
   --color-onyx: #1F1F1F;
