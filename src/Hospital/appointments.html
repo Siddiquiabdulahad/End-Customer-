@@ -11,10 +11,10 @@
 </head>
 
 <body>
-    <main class=" min-h-screen px-[80px]">
+    <main class="min-h-screen px-[80px]">
         <section>
             <header
-                class="nav-menu-records  py-2 mx-auto flex items-center justify-between relative z-10">
+                class="nav-menu-records py-2 mx-auto flex flex-wrap items-center justify-between relative z-10">
                 <div class="max-w-[150px] max-h-10">
                     <a href="#"><img src="/assets/img/logo.png" alt="logo" class="max-w-[150px] max-h-10" /></a>
                 </div>
@@ -134,10 +134,10 @@
                 </nav>
             </header>
             <!-- Breadcrumb + Top Right Icons -->
-            <div class="flex items-center justify-between mb-6 pt-[39px]">
+            <div class="flex flex-wrap items-center justify-between mb-6 pt-[39px] gap-2">
 
                 <!-- Breadcrumb -->
-                <div class="flex items-center gap-2 text-base font-normal text-gray">
+                <div class="flex items-center gap-2 text-base font-normal text-gray flex-wrap">
 
                     <a href="home.html" class="hover:text-sea-green-dark1 transition">
                         Home
@@ -188,7 +188,7 @@
                 <div class="flex flex-col lg:flex-row justify-between gap-8">
 
                     <!-- Left -->
-                    <div class="flex gap-4 items-start">
+                    <div class="flex flex-wrap sm:flex-nowrap gap-4 items-start">
 
                         <!-- Doctor Image -->
                         <div class="w-16 h-16 rounded-full overflow-hidden  mt-2 shrink-0">
@@ -202,7 +202,7 @@
                         <div>
 
                             <!-- Name -->
-                            <div class="flex items-center gap-2">
+                            <div class="flex flex-wrap items-center gap-2">
                                          Hospital #5866
                                 <h2 class="text-base font-semibold text-gray">
                                    
@@ -228,7 +228,7 @@
                            <br>
 
                             <!-- Progress -->
-                            <div class="flex items-center gap-4 mt-5">
+                            <div class="flex flex-wrap items-center gap-4 mt-5">
 
                                 <div class="w-3 h-3 rounded-full bg-sea-green2"></div>
                                 <div class="w-12 h-[3px] bg-sea-green2"></div>
@@ -244,7 +244,7 @@
                             </div>
 
                             <!-- Labels -->
-                            <div class="flex gap-8 mt-3 text-sm font-normal">
+                            <div class="flex flex-wrap gap-4 sm:gap-8 mt-3 text-sm font-normal">
 
                                 <span class="text-gray">Enquiry</span>
                                 <span class="text-gray-light1">Appointment</span>
@@ -285,10 +285,10 @@
 
                     </div>
 
-                    <!-- Right -->
-                    <div class="flex flex-col items-end">
+                    <!-- Right (keep original alignment: items-end) -->
+                    <div class="flex flex-col items-end w-full lg:w-auto">
 
-                        <div class="space-y-2 text-right ">
+                        <div class="space-y-2 text-right w-full">
                             <p class="text-base font-normal">6 km</p>
                             <p class="text-base font-normal">20 mins away</p>
                             <p class="text-base font-normal text-gray-dark-1">24/04/2025 - 03:34 PM</p>
@@ -296,7 +296,7 @@
                         </div>
 
                         <!-- Buttons -->
-                        <div class="flex gap-3 mt-6">
+                        <div class="flex flex-wrap gap-3 mt-6 justify-end w-full">
 
                             <!-- Directions -->
                             <button
@@ -337,8 +337,8 @@
 
                         </div>
 
-                        <!-- Payment -->
-                        <div class="flex gap-4 mt-6 flex-wrap">
+                        <!-- Payment boxes: keep right-aligned, wrap on small screens -->
+                        <div class="flex flex-wrap gap-4 mt-6 justify-end w-full">
 
                             <!-- UPI QR Payment -->
                             <div
@@ -385,14 +385,14 @@
                         </div>
 
                         <!-- Clinic Info -->
-                        <div class="mt-6 text-right text-sm font-normal  space-y-2">
+                        <div class="mt-6 text-right text-sm font-normal space-y-2 w-full">
                             <p class="text-gray">24/04/2025 - 4 PM to 6 PM</p>
                             <p class="text-gray">Andheri E - 416001</p>
                             <p class="text-gray">Clinic Visit <span class="text-sea-green-dark1">₹500</span></p>
                         </div>
 
                         <!-- Profile Visibility -->
-                        <div class="mt-4">
+                        <div class="mt-4 w-full flex justify-end">
 
                             <button
                                 class="proforma-open-btn border border-deep-teal-green bg-mint-cream text-gray px-5 py-2 rounded-lg text-sm font-normal flex items-center gap-2 cursor-pointer">
@@ -709,7 +709,7 @@
             </div>
 
             <!-- Help Box -->
-            <div class="bg-white border border-gray-light3 rounded-2xl p-5 mt-8 flex items-center gap-4">
+            <div class="bg-white border border-gray-light3 rounded-2xl p-5 mt-8 flex flex-wrap items-center gap-4">
 
                 <!-- Call Icon -->
                 <div
@@ -736,50 +736,32 @@
 
             </div>
 
-            <!-- Refer Banner -->
-            <div
-                class="my-8 rounded-2xl overflow-hidden bg-gradient-to-r from-[#52d6b4] to-[#38b2ac] px-6 py-4 relative">
-
-                <div class="flex items-center justify-between gap-6">
-
-                    <!-- Left Section -->
-                    <div class="flex items-start gap-3 relative">
-
-                        <!-- Small Side Image -->
-                        <img src="/assets/img/appointments/half-dollar.svg" alt="refer"
-                            class="w-10 h-10 object-contain absolute -left-8 top-0" />
-
-                        <!-- Text -->
-                        <div class="text-white">
-
-                            <h3 class="text-lg font-bold ">
-                                Refer and Earn
-                            </h3>
-
-                            <p class="mt-1 text-lg font-normal">
-                                Invite family and friends to
-                                earn cashbacks
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Center Button -->
-                    <button
-                        class="border border-white text-white px-24 py-2 rounded-full font-bold text-lg bg-sea-green-dark1">
-
-                        Invite Now
-
-                    </button>
-
-                    <!-- Right Image -->
-                    <img src="/assets/img/appointments/refer-earn-banner.svg" alt="refer illustration"
-                        class="w-24 h-20 object-contain shrink-0" />
-
-                </div>
-
+            <!-- Refer Banner (responsive but preserves original layout on desktop) -->
+           <div class="my-8 rounded-2xl overflow-hidden bg-gradient-to-r from-[#52d6b4] to-[#38b2ac] px-4 sm:px-6 py-4">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-5">
+        
+        <!-- Left section: small icon + text (no absolute positioning) -->
+        <div class="flex items-center gap-3 text-white">
+            <img src="/assets/img/appointments/half-dollar.svg" alt="refer" 
+                 class="w-10 h-10 object-contain shrink-0" />
+            <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold">Refer and Earn</h3>
+                <p class="mt-1 text-base sm:text-lg font-normal">
+                    Invite family and friends to earn cashbacks
+                </p>
             </div>
+        </div>
+
+        <!-- Center Button – full width on mobile, auto on larger -->
+        <button class="border border-white text-white px-6 sm:px-8 md:px-10 py-2 rounded-full font-bold text-base sm:text-lg bg-sea-green-dark1 w-full md:w-auto whitespace-nowrap">
+            Invite Now
+        </button>
+
+       
+        <img src="/assets/img/appointments/refer-earn-banner.svg" alt="refer illustration" 
+             class="w-20 h-16 sm:w-24 sm:h-20 object-contain shrink-0" />
+    </div>
+</div>
 
         </section>
     </main>
