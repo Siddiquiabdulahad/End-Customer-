@@ -85,6 +85,9 @@
   --color-sun-yellow: #FC9916;
   --color-gray-light-13: #D1D5DB;
   --color-purple-5:#EDE9FE;
+  --color-soft-cloud-2: #F3FFFC;
+  --color-soft-cloud-1: #F3FFFCD1;
+  --color-gray-light-14: #949FB1;
     /* Box Shadow */
   --box-shadow-1: 4px 4px 10px 4px rgba(0, 0, 0, 0.20);
   --box-shadow-2: 0 12px 24px -4px rgba(145, 158, 171, 0.12);
@@ -242,6 +245,7 @@
   --color-slate-navy:#1D293D;
   --color-slate-blue-gray:#62748E;
   --color-muted-green-tint:#1A7A5E1A;
+  --color-primary-blue: #5046FA;
   --color-pale-emerald:#D1FAE5;
   --color-spring-green:#BBF7D0;
   --color-forest-teal:#065F46;
